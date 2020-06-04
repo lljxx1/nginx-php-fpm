@@ -93,7 +93,7 @@ RUN buildDeps='curl gcc make autoconf libc-dev zlib1g-dev pkg-config' \
     && ln -sf /etc/php/7.2/mods-available/imagick.ini /etc/php/7.2/fpm/conf.d/20-imagick.ini \
     && ln -sf /etc/php/7.2/mods-available/imagick.ini /etc/php/7.2/cli/conf.d/20-imagick.ini
 
-RUN pec install apcu_bc
+RUN pecl install apcu_bc
 RUN curl -o /tmp/composer-setup.php https://getcomposer.org/installer \
   && curl -o /tmp/composer-setup.sig https://composer.github.io/installer.sig \
   && php -r "if (hash('SHA384', file_get_contents('/tmp/composer-setup.php')) !== trim(file_get_contents('/tmp/composer-setup.sig'))) { unlink('/tmp/composer-setup.php'); echo 'Invalid installer' . PHP_EOL; exit(1); }" \
