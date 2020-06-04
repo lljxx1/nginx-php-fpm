@@ -62,7 +62,7 @@ RUN buildDeps='curl gcc make autoconf libc-dev zlib1g-dev pkg-config' \
             php7.2-intl \
             php7.2-xml \
             php-pear \
-    && pecl -d php_suffix=7.2 install -o -f redis memcached imagick apcu_bc \
+    && pecl -d php_suffix=7.2 install -o -f redis memcached imagick \
     && mkdir -p /run/php \
     && pip install wheel \
     && pip install supervisor supervisor-stdout \
