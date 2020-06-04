@@ -57,6 +57,7 @@ RUN buildDeps='curl gcc make autoconf libc-dev zlib1g-dev pkg-config' \
             php7.2-mysql \
             php7.2-zip \
 	    php7.2-soap \ 
+	    php72-apcu \
             php7.2-pgsql \
             php7.2-intl \
             php7.2-xml \
