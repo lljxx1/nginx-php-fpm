@@ -85,6 +85,7 @@ RUN buildDeps='curl gcc make autoconf libc-dev zlib1g-dev pkg-config' \
     && echo "extension=redis.so" > /etc/php/7.2/mods-available/redis.ini \
     && echo "extension=memcached.so" > /etc/php/7.2/mods-available/memcached.ini \
     && echo "extension=imagick.so" > /etc/php/7.2/mods-available/imagick.ini \
+    && echo "extension=apcu.so" > /etc/php/7.2/mods-available/apcu.ini \
     && ln -sf /etc/php/7.2/mods-available/redis.ini /etc/php/7.2/fpm/conf.d/20-redis.ini \
     && ln -sf /etc/php/7.2/mods-available/redis.ini /etc/php/7.2/cli/conf.d/20-redis.ini \
     && ln -sf /etc/php/7.2/mods-available/memcached.ini /etc/php/7.2/fpm/conf.d/20-memcached.ini \
